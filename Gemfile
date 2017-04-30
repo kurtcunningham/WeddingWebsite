@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 4.2'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-minify-html'
+gem 'middleman-sprockets'
 # gem 'middleman-deploy', '~> 1.0'
 
 # Config Gems
@@ -14,3 +15,14 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'bourbon'
 gem 'neat'
 gem 'nokogiri'
+
+# Bower Packages
+source 'https://rails-assets.org' do
+
+  #jQuery
+  gem 'rails-assets-jquery'
+
+  # jQuery Countdown
+  gem 'rails-assets-jquery.countdown'
+
+end

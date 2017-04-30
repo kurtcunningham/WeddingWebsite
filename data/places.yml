@@ -1,0 +1,17 @@
+place:
+  - title: Pinestripes (Wedding Venue)
+    img: places/place-img-2.jpg
+    alt: Wedding Venue / Pinestripes
+    address: 1150 Willow Rd, Northbrook, IL 60062
+    details:
+      - detail: (847) 480-2323
+      - detail: https://goo.gl/maps/jMa82f6tzhp
+      - detail:
+  - title: Sheraton (Wedding Hotel)
+    img: places/place-img-3.jpg
+    alt: Wedding Hotel / Sheraton
+    address: 1110 Willow Rd, Northbrook, IL 60062
+    details:
+      - detail: (847) 480-1900
+      - detail: https://goo.gl/maps/pZcr1bjww362
+      - detail: Book by Sept. 5

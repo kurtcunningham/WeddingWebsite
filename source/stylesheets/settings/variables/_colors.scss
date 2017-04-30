@@ -5,19 +5,27 @@
 $black-base:   #2A2A2A;
 
 // Blue
-$blue-base:    #B3D0DB;
+$blue-base:    #B3C3C9;
+$blue-dark:    #8E9DA3;
 
 // Grey
 $grey-base:    #ECEFF0;
 
+// Pink
+$pink-base:    #FCE4E2;
+
 // White
 $white-base:   #FFFFFF;
+$white-dark:   #FAFAFA;
 
 
 // Main Palette List
 $colors: (
   black-base:    $black-base,
   blue-base:     $blue-base,
+  blue-dark:     $blue-dark,
   grey-base:     $grey-base,
-  white-base:    $white-base
+  pink-base:     $pink-base,
+  white-base:    $white-base,
+  white-dark:    $white-dark
 );

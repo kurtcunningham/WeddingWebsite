@@ -1,0 +1,56 @@
+// Layout Base Stylesheet
+// ========================================
+
+// Global Styles
+html,
+body {
+  background: $white-dark;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+// Backgrounds
+@each $color in $colors {
+  $name:      nth($color, 1);
+  $bg-color:  nth($color, 2);
+
+  .background--#{$name} {
+    background-color: $bg-color;
+  }
+}
+
+// Clears + Resets
+.clear { clear: both; }
+.clearfix { @include clearfix; }
+
+@each $reset in $resets {
+  $position:  nth($reset, 1);
+  $zero:      nth($reset, 2);
+
+  .margin-reset--#{$position} {
+    margin-#{$position}: $zero !important;
+  }
+
+  .padding-reset--#{$position} {
+    padding-#{$position}: $zero !important;
+  }
+}
+
+.margin--reset   { margin:  0; }
+.padding--reeset { padding: 0; }
+
+// Spacers
+@each $spacer in $spacers {
+  $type:   nth($spacer, 1);
+  $value:  nth($spacer, 2);
+
+  .padding-bottom--#{$type} { padding-bottom: $value; }
+  .padding-top--#{$type}    { padding-top:    $value; }
+
+  .margin-bottom--#{$type} { margin-bottom: $value; }
+  .margin-left--#{$type}   { margin-left:   $value; }
+  .margin-right--#{$type}  { margin-right:  $value; }
+  .margin-top--#{$type}    { margin-top:    $value; }
+}

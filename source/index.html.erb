@@ -1,3 +1,102 @@
 ---
 title: Kurt &amp; Kesley 2017
 ---
+<aside role="complentary" class="page__aside">
+  <span class="slider__border slider__border__item-1"></span>
+  <span class="slider__border slider__border__item-2"></span>
+  <span class="slider__border slider__border__item-3"></span>
+  <ul id="slideshow" class="page__aside__slider">
+    <% data.slider.slider_image.each do |i| %>
+      <li class="page__aside__slider-item">
+        <%= image_tag i.img, alt: i.alt %>
+      </li>
+    <% end %>
+  </ul>
+</aside>
+<section role="region" aria-labelledby="kurt-and-kesley-2017" class="page__section">
+  <header role="heading" class="page__section__content">
+    <time id="countdown" class="label"></time>
+    <h1 id="kurt-and-kesley-2017">Kesley Zahn + Kurt Cunningham are happy to announce their  union on <span class="highlight--primary">October 6, 2017</span>.</h1>
+    <p class="paragraph-width">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+  </header>
+  <div class="page__section__content">
+    <header role="heading">
+      <label>Important Dates</label>
+    </header>
+    <div class="background--blue-base card card--right">
+      <ul class="info-list">
+        <% data.dates.important_dates.each do |d| %>
+          <li class="info-item info-item--border-blue">
+            <h5 class="title"><%= d.title %></h5>
+            <ul class="info-sublist">
+              <% d.details.each do |i| %>
+                <li class="info-sublist-item"><%= i.detail %></li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="page__section__content">
+    <header role="heading">
+      <label>Places To Note</label>
+    </header>
+    <ul class="data-list">
+      <% data.places.place.each do |p| %>
+        <li class="data-item">
+          <%= image_tag p.img, alt: p.alt %>
+          <div class="data-item__content">
+            <h4 class="title margin-bottom--echo"><%= p.title %></h4>
+            <ul class="data-sublist">
+              <li><%= p.address %></li>
+              <li>
+                <%= p.details[0].detail %>
+                | <%= link_to 'Directions', p.details[1].detail %>
+                <% if p.details[2].detail %>
+                  | <%= p.details[2].detail %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="page__section__content">
+    <header role="heading">
+      <label>About The Couple</label>
+    </header>
+    <div class="background--grey-base card card--left">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mi ipsum, interdum at risus a, pretium placerat erat. In ac aliquam erat. Aenean quis ultrices massa, non mollis turpis. Nam tempus purus rhoncus nulla feugiat laoreet. Mauris sollicitudin dolor quis risus viverra molestie vitae at odio.</p>
+      <div class="margin-top--bravo">
+        <h4 class="title margin-bottom--delta">The Bride</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mi ipsum, interdum at risus a, pretium placerat erat. In ac aliquam erat. Aenean quis ultrices massa, non mollis turpis. Nam tempus purus rhoncus nulla feugiat laoreet. Mauris sollicitudin dolor quis risus viverra molestie vitae at odio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mi ipsum, interdum at risus a, pretium placerat erat. In ac aliquam erat. Aenean quis ultrices massa.</p>
+      </div>
+      <div class="margin-top--bravo">
+        <h4 class="title margin-bottom--delta">The Groom</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mi ipsum, interdum at risus a, pretium placerat erat. In ac aliquam erat. Aenean quis ultrices massa, non mollis turpis. Nam tempus purus rhoncus nulla feugiat laoreet. Mauris sollicitudin dolor quis risus viverra molestie vitae at odio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mi ipsum, interdum at risus a, pretium placerat erat. In ac aliquam erat. Aenean quis ultrices massa.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page__section__content">
+    <header role="heading">
+      <label>Wedding Registry</label>
+    </header>
+    <ul class="data-list">
+      <% data.registry.registry.each do |r| %>
+        <li class="data-item">
+          <%= image_tag r.img, alt: r.alt %>
+          <div class="data-item__content">
+            <h4 class="title margin-bottom--echo"><%= r.title %></h4>
+            <ul class="data-sublist">
+              <li><%= r.url %></li>
+            </ul>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>

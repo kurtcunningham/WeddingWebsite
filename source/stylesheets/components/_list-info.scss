@@ -1,0 +1,77 @@
+// List Info Component Stylesheets
+// ========================================
+
+// Variables
+$info-item-border:                  1px solid;
+$info-item-border-color:            $grey-base;
+$info-item-margin:                  0 0 $spacer-delta;
+$info-item-padding:                 $spacer-delta 0 $spacer-charlie;
+
+$info-item-border-blue-color:       $blue-dark;
+
+$info-item-title-margin:            0 0 $spacer-delta;
+
+$info-slist-display:                table;
+$info-slist-width:                  100%;
+
+$info-slist-item-display-sm:        block;
+$info-slist-item-display-md:        table-cell;
+$info-slist-item-padding-md:        0 $spacer-echo;
+$info-slist-item-padding-lg:        0;
+$info-slist-item-width-sm:          100%;
+$info-slist-item-width-md:          33.333%;
+
+
+// Structure
+.info-item {
+  border-bottom: $info-item-border;
+  border-color: $info-item-border-color;
+  margin: $info-item-margin;
+  padding: $info-item-padding;
+
+  // First Child Reset
+  &:first-child {
+    @extend .padding-reset--top;
+  }
+
+  // Last Child Reset
+  &:last-child {
+    @extend .padding-reset--bottom;
+    border: none;
+  }
+
+  // Dark Border
+  &--border-blue {
+    border-color: $info-item-border-blue-color;
+  }
+
+  // Title
+  .title {
+    @include s-foxtrot;
+    margin: $info-item-title-margin;
+  }
+}
+
+// Sublist
+.info-sublist {
+  display: $info-slist-display;
+  width: $info-slist-width;
+}
+
+.info-sublist-item {
+  @include font-type($primary-mono, normal, 400);
+  @include s-golf;
+  display: $info-slist-item-display-sm;
+  width: $info-slist-item-width-sm;
+
+  @include media($medium) {
+    padding: $info-slist-item-padding-md;
+  }
+
+  @include media($large) {
+    display: $info-slist-item-display-md;
+    width: $info-slist-item-width-md;
+    padding: $info-slist-item-padding-lg;
+    word-wrap: nowrap;
+  }
+}

@@ -1,1 +1,6 @@
-// This is where it all goes :)
+// Javascript Files
+
+//= require jquery
+//= require jquery.countdown
+
+//= require modules/page

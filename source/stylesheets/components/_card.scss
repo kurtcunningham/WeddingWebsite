@@ -1,0 +1,62 @@
+// Card Component Stylesheet
+// ========================================
+
+// Variables
+$card-box-shadow:         0 0 20px rgba(0, 0, 0, 0.05);
+$card-padding:            $spacer-charlie;
+$card-position:           relative;
+$card-width:              100%;
+
+$card-border-bg:          $grey-base;
+$card-border-display:     block;
+$card-border-height:      400px;
+$card-border-position:    absolute;
+$card-border-width:       1px;
+
+$card-r-margin:           0 0 0 $spacer-bravo;
+$card-r-right:            0;
+
+$card-r-border-cords:     0 0 0 -25px;
+
+$card-l-left:             -45px;
+$card-l-padding:          $spacer-charlie $spacer-charlie $spacer-charlie $spacer-bravo;
+
+$card-l-border-cords:     0 -25px 0 null;
+
+
+// Structure
+.card {
+  @include position($card-position);
+  box-shadow: $card-box-shadow;
+  padding: $card-padding;
+  width: $card-width;
+}
+
+// Modifiers
+.card--right {
+  margin: $card-r-margin;
+  right: $card-r-right;
+
+  &::before {
+    @include position($card-border-position, $card-r-border-cords);
+    background-color: $card-border-bg;
+    content: " ";
+    display: $card-border-display;
+    height: $card-border-height;
+    width: $card-border-width;
+  }
+}
+
+.card--left {
+  left: $card-l-left;
+  padding: $card-l-padding;
+
+  &::before {
+    @include position($card-border-position, $card-l-border-cords);
+    background-color: $card-border-bg;
+    content: " ";
+    display: $card-border-display;
+    height: $card-border-height;
+    width: $card-border-width;
+  }
+}

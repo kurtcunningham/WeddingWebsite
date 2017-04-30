@@ -15,7 +15,7 @@ $s-charlie:       32px;
 $s-delta:         22px;
 $s-echo:          18px;
 $s-foxtrot:       $font-size-base;
-$s-golf:          12px;
+$s-golf:          14px;
 $s-hotel:         10px;
 
 // Letter Spacing
@@ -42,6 +42,6 @@ $text-alignments: (
 // Text Colors Map
 $type-colors: (
   'blue':      ( $blue-base  ),
-  'grey':      ( $grey-dark  ),
+  'grey':      ( $grey-base  ),
   'white':     ( $white-base )
 );

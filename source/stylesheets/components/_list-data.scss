@@ -1,0 +1,48 @@
+// List Data Component Stylesheet
+// ========================================
+
+// Variables
+$data-item-display:           block;
+$data-item-margin:            0 0 $spacer-delta;
+
+$data-item-img-float:         left;
+$data-item-img-margin-sm:     0 0 $spacer-delta;
+$data-item-img-margin-md:     0 $spacer-delta 0 0;
+$data-item-img-size-sm:       100%;
+$data-item-img-size-md:       135px;
+
+$data-item-content-border:    1px solid $grey-base;
+$data-item-content-float:     left;
+$data-item-content-mheight:   135px;
+$data-item-content-padding:   $spacer-charlie 0;
+
+
+// Structure
+.data-item {
+  @include row;
+  display: $data-item-display;
+  padding: $data-item-margin;
+
+  img {
+    margin: $data-item-img-margin-sm;
+    width: $data-item-img-size-sm;
+
+    @include media($medium) {
+      @include size($data-item-img-size-md $data-item-img-size-md);
+      float: $data-item-img-float;
+      margin: $data-item-img-margin-md;
+    }
+  }
+}
+
+.data-item__content {
+  border-bottom: $data-item-content-border;
+  border-top: $data-item-content-border;
+  float: $data-item-content-float;
+  min-height: $data-item-content-mheight;
+  padding: $data-item-content-padding;
+
+  @include media($medium) {
+    width: calc(100% - 150px);
+  }
+}

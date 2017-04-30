@@ -1,0 +1,31 @@
+important_dates:
+  - title: Hotel Booking
+    details:
+      - detail: Tuesday, Sept. 5th
+      - detail: Sheraton Northbrook
+      - detail: By End of Day
+  - title: Welcome Dinner
+    details:
+      - detail: Thursday Oct. 5th
+      - detail: TBD
+      - detail: 8:00 p.m. - 12:00 a.m.
+  - title: Wedding
+    details:
+      - detail: Friday Oct. 6th
+      - detail: Pinstripes
+      - detail: 4:00 p.m. - 4:45 p.m.
+  - title: Wedding Cocktail Hour
+    details:
+      - detail: Friday Oct. 6th
+      - detail: Pinstripes
+      - detail: 5:00 p.m. - 6:30 p.m.
+  - title: Wedding Reception + Dinner
+    details:
+      - detail: Friday Oct. 6th
+      - detail: Pinstripes
+      - detail: 6:30 p.m. - 12:00 a.m.
+  - title: Wedding After Party
+    details:
+      - detail: Friday Oct. 6th
+      - detail: Pinstripes
+      - detail: 12:00 a.m. - 2:00 a.m.

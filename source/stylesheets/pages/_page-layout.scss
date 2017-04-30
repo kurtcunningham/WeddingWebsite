@@ -1,0 +1,121 @@
+// Layout Pages Stylesheet
+// ========================================
+
+// Variables
+$page-bg:                 $white-base;
+$page-box-shadow:         0 0 60px rgba(0, 0, 0, 0.15);
+$page-height:             100vh;
+$page-overflow:           hidden;
+
+$page-aside-bg:           $grey-base;
+$page-aside-float:        left;
+$page-aside-height-sm:    $page-height  / 1.25;
+$page-aside-height-md:    $page-height / 1.15;
+$page-aside-height-lg:    $page-height;
+$page-aside-overflow:     hidden;
+$page-aside-position:     relative;
+$page-aside-width-sm:     100%;
+$page-aside-width-md:     50%;
+
+$slider-border-border:    1px solid $white-base;
+$slider-border-position:  absolute;
+$slider-border-width:     100%;
+$slider-border-z-index:   99999;
+
+$page-aside-img-fit:      cover;
+$page-aside-img-size:     100%;
+
+$page-section-float:      left;
+$page-section-height-sm:  100%;
+$page-section-height-md:  100vh;
+$page-section-overflow:   scroll;
+$page-section-padding:    $spacer-bravo;
+$page-section-width-sm:   100%;
+$page-section-width-md:   50%;
+
+
+// Structure
+.page {
+  background-color: $page-bg;
+  box-shadow: $page-box-shadow;
+
+  @include media($large) {
+    height: $page-height;
+    overflow: $page-overflow;
+  }
+}
+
+// Page Aside
+.page__aside {
+  @include position($page-aside-position);
+  background-color: $page-aside-bg;
+  float: $page-aside-float;
+  height: $page-aside-height-sm;
+  overflow: $page-aside-overflow;
+  width: $page-aside-width-sm;
+
+  @include media($medium) {
+    height: $page-aside-height-md;
+  }
+
+  @include media($large) {
+    height: $page-aside-height-lg;
+    width: $page-aside-width-md;
+  }
+
+  // Slider Items
+  &__slider-item {
+    height: $page-aside-height-lg;
+
+    img {
+      @include size($page-aside-img-size $page-aside-img-size);
+      object-fit: $page-aside-img-fit;
+    }
+  }
+
+  // Slider Borders
+  .slider__border {
+    @include position($slider-border-position);
+    border: $slider-border-border;
+    width: $slider-border-width;
+    z-index: $slider-border-z-index;
+
+    &__item-1 {
+      left: $spacer-charlie;
+      height: calc(100% - 60px);
+      top: $spacer-charlie;
+      width: calc(100% - 60px);
+    }
+
+    &__item-2 {
+      left: $spacer-charlie * 1.5;
+      height: calc(100% - 90px);
+      top: $spacer-charlie * 1.5;
+      width: calc(100% - 90px);
+    }
+
+    &__item-3 {
+      left: $spacer-charlie * 2;
+      height: calc(100% - 120px);
+      top: $spacer-charlie * 2;
+      width: calc(100% - 120px);
+    }
+  }
+}
+
+// Page Section
+.page__section {
+  float: $page-section-float;
+  padding: $page-section-padding;
+  width: $page-section-width-sm;
+
+  @include media($large) {
+    height: $page-section-height-md;
+    overflow-y: $page-section-overflow;
+    width: $page-section-width-md;
+  }
+
+  &__content {
+    margin-bottom: $spacer-alpha;
+  }
+}
