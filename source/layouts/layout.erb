@@ -1,16 +1,25 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag "main" %>
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/gws3ryj.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
-    <%= yield %>
+    <main role="main">
+      <%= yield %>
+    </main>
+    <!-- Scripts -->
+    <%= javascript_include_tag "site" %>
   </body>
 </html>

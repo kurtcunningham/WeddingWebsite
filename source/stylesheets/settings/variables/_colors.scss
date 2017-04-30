@@ -1,0 +1,23 @@
+// Colors Variables Settings Stylesheet
+// ========================================
+
+// Black
+$black-base:   #2A2A2A;
+
+// Blue
+$blue-base:    #B3D0DB;
+
+// Grey
+$grey-base:    #ECEFF0;
+
+// White
+$white-base:   #FFFFFF;
+
+
+// Main Palette List
+$colors: (
+  black-base:    $black-base,
+  blue-base:     $blue-base,
+  grey-base:     $grey-base,
+  white-base:    $white-base
+);
