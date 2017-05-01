@@ -41,6 +41,7 @@ $data-item-content-padding:   $spacer-charlie 0;
   float: $data-item-content-float;
   min-height: $data-item-content-mheight;
   padding: $data-item-content-padding;
+  width: 100%;
 
   @include media($medium) {
     width: calc(100% - 150px);

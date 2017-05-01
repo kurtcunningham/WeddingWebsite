@@ -21,6 +21,18 @@ body {
   }
 }
 
+// Center
+.center {
+
+  &__parent {
+    @include position(relative);
+  }
+
+  &__child--vert {
+    @include center($horizontal: false, $vertical: true);
+  }
+}
+
 // Clears + Resets
 .clear { clear: both; }
 .clearfix { @include clearfix; }
