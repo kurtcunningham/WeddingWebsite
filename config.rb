@@ -24,7 +24,6 @@ configure :build do
   activate :minify_html
   activate :directory_indexes
   activate :gzip
-  activate :imageoptim, pngout: false
   activate :relative_assets
 end
 
