@@ -61,6 +61,18 @@ p {
   @include media($medium) {
     width: 75%;
   }
+
+  // Large Paragraph Width
+  &--large {
+
+    @include media($medium) {
+      width: 90%;
+    }
+  }
+}
+
+small {
+  @include s-hotel;
 }
 
 // Base Label
@@ -108,7 +120,8 @@ strong {
   font-weight: 600;
 }
 
-em {
+em,
+i {
   font-style: italic;
 }
 
@@ -122,7 +135,6 @@ em {
   }
 }
 
-
 // Text Colors
 @each $name, $tones in $type-colors {
   $tone-color: nth($tones, 1);
@@ -132,7 +144,28 @@ em {
   };
 }
 
-// Text Styles
-.text--uppercase  { text-transform: uppercase; }
-.text--capitalize { text-transform: capitalize; }
-.text--italic     { font-style: italic; }
+// Text Transforms
+@each $text-transform in $text-transforms {
+  $name:        nth($text-transform, 1);
+  $transform:   nth($text-transform, 2);
+
+  .text--#{$name} {
+    text-transform: $transform;
+  }
+}
+
+// Text Highlight
+.text-highlight--primary {
+  @include position(relative);
+  z-index: 1;
+
+  &::before {
+    @include center($horizontal: false, $vertical: true);
+    background-color: $blue-base;
+    content: " ";
+    height: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+  }
+}

@@ -25,6 +25,7 @@ $slider-border-z-index:   99999;
 $page-aside-img-fit:      cover;
 $page-aside-img-size:     100%;
 
+$page-section-bg:         $white-base;
 $page-section-float:      left;
 $page-section-height-sm:  100%;
 $page-section-height-md:  100vh;
@@ -105,6 +106,7 @@ $page-section-width-md:   50%;
 
 // Page Section
 .page__section {
+  background-color: $page-section-bg;
   float: $page-section-float;
   padding: $page-section-padding;
   width: $page-section-width-sm;
