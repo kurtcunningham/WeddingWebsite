@@ -5,6 +5,7 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-minify-html'
 gem 'middleman-sprockets'
+gem 'middleman-google-analytics'
 gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'master'
 
 # Config Gems

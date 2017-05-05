@@ -11,6 +11,11 @@ activate :sprockets
 # Markdown
 set :markdown_engine, :kramdown
 
+# Google Analytics
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-98644660-1'
+end
+
 # Directory Settings
 set :css_dir,    'stylesheets'
 set :js_dir,     'scripts'
