@@ -101,7 +101,13 @@ title: Kesley &amp; Kurt 2017
             <div class="center__child--vert">
               <h4 class="title margin-bottom--echo"><%= r.title %></h4>
               <ul class="data-sublist">
-                <li><%= r.url %></li>
+                <li>
+                  <% if r.url %>
+                    <%= link_to 'View Registry', r.url, target: '_blank' %>
+                  <% else %>
+                    Link Coming Soon
+                  <% end %>
+                </li>
               </ul>
             </div>
           </div>
