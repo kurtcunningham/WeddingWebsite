@@ -2,7 +2,7 @@
 // ========================================
 
 // Countdown Clock
-$("#countdown").countdown("2017/10/06", function(event) {
+$("#countdown").countdown("2017/10/07", function(event) {
   $(this).text(
     event.strftime('%D days')
   );
